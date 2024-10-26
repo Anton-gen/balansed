@@ -37,7 +37,7 @@ HAproxy должен балансировать только тот http-тра�
    backend servers
        mode http
        balance roundrobin
-#       option httpchk GET /nginx/1.18.0/
+       option httpchk GET /nginx/1.18.0/
        http-check expect status 200
        server server1 127.0.0.1:8888 check weight 2
        server server2 127.0.0.1:9999 check weight 3
